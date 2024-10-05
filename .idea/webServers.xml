@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="27e1a57b-7483-4366-8902-0ff7d5924dfb" name="46.234.126.121">
+        <fileTransfer rootFolder="/www/hosting/fmachacek.cz/cf" accessType="SFTP" host="46.234.126.121" port="22" sshConfigId="b6084681-f63c-4513-82ae-87a7a52b87f3" sshConfig="root@46.234.126.121:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
