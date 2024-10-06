@@ -1,2 +1,193 @@
-Panel layout
-{include content}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <title>{ifset $title}{$title|stripHtml} | {/ifset}CrowdNavigator Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description"/>
+    <meta content="Themesbrand" name="author"/>
+
+    <link rel="shortcut icon" href="{$basePath}/assets/panel/images/favicon.ico">
+
+    <link href="{$basePath}/assets/panel/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css"/>
+    <link href="{$basePath}/assets/panel/css/bootstrap.css" id="bootstrap-style" rel="stylesheet" type="text/css"/>
+    <link href="{$basePath}/assets/panel/css/icons.css" rel="stylesheet" type="text/css"/>
+    <link href="{$basePath}/assets/panel/css/app.css" id="app-style" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body data-sidebar="dark">
+
+<div id="layout-wrapper">
+    <header id="page-topbar">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <div class="navbar-brand-box">
+                    <a href="{link Home:default}" class="logo logo-dark">
+                        <span class="logo-sm">
+                            <img src="{$basePath}/assets/global/img/favicon/dark.svg" alt="" height="20">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="{$basePath}/assets/global/img/logo/dark.svg" alt="" height="20">
+                        </span>
+                    </a>
+                    <a href="{link Home:default}" class="logo logo-light">
+                        <span class="logo-sm">
+                            <img src="{$basePath}/assets/global/img/favicon/light.svg" alt="" height="20">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="{$basePath}/assets/global/img/logo/light.svg" alt="" height="20">
+                        </span>
+                    </a>
+                </div>
+
+                <button type="button" class="btn btn-sm px-3 font-size-16 header-item" id="vertical-menu-btn">
+                    <i class="fa fa-fw fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="d-flex">
+                {*                <div class="dropdown d-none d-sm-inline-block">*}
+{*                    <button type="button" class="btn header-item" id="mode-setting-btn">*}
+{*                        <i data-feather="moon" class="icon-lg layout-mode-dark"></i>*}
+{*                        <i data-feather="sun" class="icon-lg layout-mode-light"></i>*}
+{*                    </button>*}
+{*                </div>*}
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item right-bar-toggle me-2">
+                        <i data-feather="settings" class="icon-lg"></i>
+                    </button>
+                </div>
+
+                <div class="dropdown d-inline-block">
+                    <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <i class="fa fa-user" ></i>&nbsp;
+                        <span class="d-none d-xl-inline-block ms-1 fw-medium">Filip Macháček</span>
+                        <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-face-profile font-size-16 align-middle me-1"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Logout</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="vertical-menu">
+        <div data-simplebar class="h-100">
+            <div id="sidebar-menu">
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title" data-key="t-menu">Menu</li>
+
+                    <li>
+                        <a href="index.html">
+                            <i data-feather="home"></i>
+                            <span data-key="t-dashboard">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow">
+                            <i data-feather="grid"></i>
+                            <span data-key="t-apps">Apps</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li>
+                                <a href="apps-calendar.html">
+                                    <span data-key="t-calendar">Calendar</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="apps-chat.html">
+                                    <span data-key="t-chat">Chat</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <span data-key="t-email">Email</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="apps-email-inbox.html" data-key="t-inbox">Inbox</a></li>
+                                    <li><a href="apps-email-read.html" data-key="t-read-email">Read Email</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <span data-key="t-invoices">Invoices</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="apps-invoices-list.html" data-key="t-invoice-list">Invoice List</a></li>
+                                    <li><a href="apps-invoices-detail.html" data-key="t-invoice-detail">Invoice Detail</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow">
+                                    <span data-key="t-contacts">Contacts</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="apps-contacts-grid.html" data-key="t-user-grid">User Grid</a></li>
+                                    <li><a href="apps-contacts-list.html" data-key="t-user-list">User List</a></li>
+                                    <li><a href="apps-contacts-profile.html" data-key="t-profile">Profile</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+                {include content}
+
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                            Build on Nette Framework
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+
+
+
+
+<script src="{$basePath}/assets/panel/libs/jquery/jquery.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/metismenu/metisMenu.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/simplebar/simplebar.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/node-waves/waves.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/feather-icons/feather.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/pace-js/pace.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/apexcharts/apexcharts.min.js"></script>
+
+<script src="{$basePath}/assets/panel/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+<script src="{$basePath}/assets/panel/js/pages/dashboard.init.js"></script>
+<script src="{$basePath}/assets/panel/js/app.js"></script>
+
+</body>
+
+</html>
+

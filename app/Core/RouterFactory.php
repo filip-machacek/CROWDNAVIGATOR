@@ -22,6 +22,13 @@ final class RouterFactory
 		return $router;
 	}
 
+    private static function createPanelRouter(): RouteList{
+        $panelRouter = new RouteList('Panel');
+        $panelRouter->addRoute('panel/<presenter>/<action>[/<id>]', 'Home:default');
+
+        return $panelRouter;
+    }
+
     private static function createWebRouter(): RouteList{
         $webRouter = new RouteList('Web');
         $webRouter->addRoute('<presenter>/<action>[/<id>]', 'Home:default');
@@ -29,10 +36,5 @@ final class RouterFactory
         return $webRouter;
     }
 
-    private static function createPanelRouter(): RouteList{
-        $panelRouter = new RouteList('Panel');
-        $panelRouter->addRoute('panel/<presenter>/<action>[/<id>]', 'Home:default');
 
-        return $panelRouter;
-    }
 }

@@ -1,2 +1,75 @@
-Web layout<br>
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="theme-color" content="#0E8CB4">
+
+    <title>{ifset $title}{$title|stripHtml} | {/ifset}CrowdNavigator</title>
+
+    <meta name="author" content="Filip Macháček">
+    <meta name="description" content="{$description}">
+
+    <meta name="robots" content="{$robots}"/>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crowd Navigator">
+    <meta property="og:title" content="{$title}">
+    <meta property="og:description" content="{$description}">
+    <meta property="og:url" content="https://cf.fmachacek.cz{link this}">
+    <meta property="og:image" content="TBD">
+
+    <link rel="stylesheet" href="{$basePath}/assets/web/css/plugins.css">
+    <link rel="stylesheet" href="{$basePath}/assets/web/css/style.css">
+</head>
+
+<body>
+<div class="content-wrapper">
+    <header class="wrapper bg-soft-primary">
+        <nav class="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark">
+            <div class="container flex-lg-row flex-nowrap align-items-center">
+                <div class="navbar-brand w-100">
+                    <a href="/">
+                        <img class="logo-dark" src="{$basePath}/assets/global/img/logo/dark.svg"  alt="Logo CrowdNavigator"/>
+                        <img class="logo-light" src="{$basePath}/assets/global/img/logo/light.svg" alt="Logo CrowdNavigator"/>
+                    </a>
+                </div>
+                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                    <div class="offcanvas-header d-lg-none">
+                        <h3 class="text-white fs-30 mb-0">CrowdNavigator</h3>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+                        <ul class="navbar-nav">
+                            {include 'header.latte'}
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-other w-100 d-flex ms-auto">
+                    <ul class="navbar-nav flex-row align-items-center ms-auto">
+                        <li class="nav-item d-none d-md-block">
+                            <a href="{link Home:default}#kontakt" class="btn btn-sm btn-white rounded-pill">Kontakt</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+
 {include content}
+
+
+{include 'footer.latte'}
+
+<script src="{$basePath}/assets/web/js/plugins.js"></script>
+<script src="{$basePath}/assets/web/js/theme.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 parameters:
-
+    robots: 'noindex, nofollow'
 
 application:
 	errorPresenter:
@@ -9,9 +9,9 @@ application:
 
 
 database:
-	dsn: 'sqlite::memory:'
-	user:
-	password:
+    dsn: 'mysql:host=127.0.0.1;dbname=crowdnavigator_70'
+    user: 'crowdnavigator.70'
+    password: '1,MMcFtX3wU9jYIK-'
 
 
 latte:

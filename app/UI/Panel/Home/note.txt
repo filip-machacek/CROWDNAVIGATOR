@@ -1,0 +1,7 @@
+{foreach $posts as $post}
+                                <tr>
+                                    <td>{$post->title}</td>
+                                    <td>{$post->created_at|date:'F j, Y'}</td>
+                                    <td>{$post->content|truncate:256}</td>
+                                </tr>
+                            {/foreach}

@@ -1,0 +1,127 @@
+{block content}
+<section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-400 text-white" data-image-src="/assets/web/img/photos/bg3.jpg">
+    <div class="container pt-17 pb-22 text-center">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <div class="post-header">
+                    <h1 class="display-1 mb-4 text-white">Všechny kampaně</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="wrapper bg-soft-primary angled upper-end">
+    <div class="container pb-14 pb-md-16">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="blog single mt-n20">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="fs-15 text-uppercase text-line text-navy">Typ kampaně</h6>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                        <label class="form-check-label text-navy" for="invalidCheck">Darovací</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                        <label class="form-check-label text-navy" for="invalidCheck">Investiční</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="fs-15 text-uppercase text-line text-navy">Tématika</h6>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                        <label class="form-check-label text-navy" for="invalidCheck">Móda</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                        <label class="form-check-label text-navy" for="invalidCheck">Film</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                        <label class="form-check-label text-navy" for="invalidCheck">Hudba</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                        <label class="form-check-label text-navy" for="invalidCheck">IT</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6 class="fs-15 text-uppercase text-line text-navy">Investovaná částka</h6>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-select-wrapper">
+                                            <select class="form-select" id="form-select" name="department" required>
+                                                <option selected disabled value="">Nerozhoduje</option>
+                                                <option value="Sales">Sales</option>
+                                                <option value="Marketing">Marketing</option>
+                                                <option value="Customer Support">Customer Support</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="wrapper bg-soft-primary">
+    <div class="container">
+        <div class="row">
+            {for $i = 1; $i <= 10; $i++}
+            <div class="col-lg-4 mb-5">
+                <div class="card">
+                    <figure class="card-img-top overlay overlay-1 hover-scale">
+                        <a href="#">
+                            <img src="https://d2fc819w98cyv2.cloudfront.net/projects/project_12926/gallery/125176_1723186221645_600x400" alt=""/>
+                        </a>
+                        <figcaption>
+                            <h5 class="from-top mb-0">Zobrazit více</h5>
+                        </figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <div class="post-header">
+                            <div class="post-category text-line">
+                                <a href="#" class="hover" rel="category">Odměnový</a>
+                            </div>
+                            <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./blog-post.html">Vytiskněme kalendáře 2025 na pomoc pejskům a
+                                    kočičkám</a></h2>
+                            <h5>Vybráno 87 198 z 90 000 Kč</h5>
+                        </div>
+                        <div class="post-content">
+                            <p>Autor: NF PES V NOUZI</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <ul class="post-meta d-flex mb-0">
+                            <li class="post-date"><i class="uil uil-globe"></i><span>HitHit.cz</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {/for}
+        </div>
+    </div>
+</section>

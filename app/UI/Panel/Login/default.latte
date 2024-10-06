@@ -1,0 +1,26 @@
+{block content}
+<div class="text-center">
+   <h5 class="mb-0">Vítejte zpět!</h5>
+   <p class="text-muted mt-2">Pro pokračování do CrowdNavigator Panelu se přihlaste</p>
+</div>
+{form signInForm, class => "mt-4 pt-2"}
+   <div class="mb-3">
+      {label username, class => "form-label"/}
+		{input username, class => "form-control", placeholder => "Uživatelské jméno"}
+   </div>
+   <div class="mb-3">
+      <div class="d-flex align-items-start">
+         <div class="flex-grow-1">
+            {label password, class => "form-label"/}
+         </div>
+      </div>
+      <div class="input-group auth-pass-inputgroup">
+         {input password, class => "form-control", placeholder => "**************"}
+         <button class="btn btn-light shadow-none ms-0" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
+      </div>
+   </div>
+   <div class="mb-3">
+      {input send, class => "btn btn-primary w-100 waves-effect waves-light"}
+   </div>
+
+{/form}

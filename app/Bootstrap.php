@@ -14,9 +14,8 @@ class Bootstrap
 		$configurator = new Configurator;
 		$rootDir = dirname(__DIR__);
 
-		$configurator->setDebugMode('109.183.197.12'); // enable for your remote IP
+		$configurator->setDebugMode(true); // enable for your remote IP
 		$configurator->enableTracy($rootDir . '/log');
-        \Tracy\Debugger::log('hello');
 
 		$configurator->setTempDirectory($rootDir . '/temp');
 

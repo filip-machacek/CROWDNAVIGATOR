@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="theme-color" content="#0E8CB4">
+
+    <title>{ifset $title}{$title|stripHtml} | {/ifset}CrowdNavigator Panel</title>
+    <link rel="canonical" href="https://cf.fmachacek.cz{link this}"/>
+
+    <meta name="author" content="Filip Macháček">
+    <meta name="description" content="{$description}">
+
+    <meta name="robots" content="{$robots}"/>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crowd Navigator">
+    <meta property="og:title" content="{$title}">
+    <meta property="og:description" content="{$description}">
+    <meta property="og:url" content="https://cf.fmachacek.cz{link this}">
+    <meta property="og:image" content="TBD">
+
+    <link href="{$basePath}/assets/panel/css/bootstrap.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="{$basePath}/assets/panel/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="{$basePath}/assets/panel/css/app.css" id="app-style" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="auth-page">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-xxl-3 col-lg-4 col-md-5">
+                <div class="auth-full-page-content d-flex p-sm-5 p-4">
+                    <div class="w-100">
+                        <div class="d-flex flex-column h-100">
+                            <div class="mb-4 mb-md-5 text-center">
+                                <a href="{link :Web:Home:default}" class="d-block auth-logo">
+                                    <img src="{$basePath}/assets/global/img/logo/dark.svg" alt="Logo" height="28">
+                                </a>
+                            </div>
+                            <div class="auth-content my-auto">
+                                {include content}
+                            </div>
+                            <div class="mt-4 mt-md-5 text-center">
+                                <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Filip Macháček | Design Themesbrand</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-9 col-lg-8 col-md-7">
+                <div class="auth-bg pt-md-5 p-4 d-flex">
+                    <div class="bg-overlay bg-primary"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{$basePath}/assets/panel/libs/jquery/jquery.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/metismenu/metisMenu.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/simplebar/simplebar.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/node-waves/waves.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/feather-icons/feather.min.js"></script>
+<script src="{$basePath}/assets/panel/libs/pace-js/pace.min.js"></script>
+<script src="{$basePath}/assets/panel/js/pages/pass-addon.init.js"></script>
+</body>
+
+</html>
